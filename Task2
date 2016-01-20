@@ -1,0 +1,34 @@
+// app.js
+// create angular app
+var loginform = angular.module('loginform', []);
+// create angular controller
+loginform.controller('mainController', function($scope) {
+
+  // function to submit the form after all validation has occurred            
+  $scope.submitForm = function(isValid) {
+
+    // check to make sure the form is completely valid
+    if (isValid) {
+      alert('our form is amazing');
+    }
+
+  };
+
+	
+
+angular.module('staticSelect', [])
+ .controller('ExampleController', ['$scope', function($scope) {
+   $scope.data = {
+    singleSelect: null,
+    multipleSelect: [],
+    option1: 'option-1',
+   };
+
+   $scope.forceUnknownOption = function() {
+     $scope.data.singleSelect = 'nonsense';
+   };s
+}]);
+
+
+});
+
